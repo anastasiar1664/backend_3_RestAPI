@@ -1,4 +1,4 @@
-namespace taskApi.Models;
+namespace TaskApi.Models;
 
 public class TaskItem
 {

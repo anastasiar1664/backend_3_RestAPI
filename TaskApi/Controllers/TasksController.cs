@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-using System.Runtime.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using TaskApi.Models;
 namespace TaskApi.Controllers;
@@ -65,7 +63,7 @@ public class TasksController : ControllerBase
             Description = dto.Description,
             Priority = dto.Priority,
             IsCompleted = false,
-            CreateAt = DateTime.Now
+            CreatedAt = DateTime.Now
         };
         _tasks.Add(newTask);
         return CreatedAtAction(nameof(GetById), new { id = newTask.Id }, newTask);
